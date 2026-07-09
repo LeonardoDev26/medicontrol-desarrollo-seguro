@@ -1,0 +1,6 @@
+Inicio de archivo de logs inseguro
+Intento fallido de acceso
+Intento fallido de acceso
+Ingreso exitoso: 11111111-1 - Administrador
+Intento fallido de acceso
+Ingreso exitoso: 33333333-3 - Doctor

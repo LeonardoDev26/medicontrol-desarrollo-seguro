@@ -1,0 +1,5 @@
+# No es obligatorio instalar dependencias para ejecutar la versión vulnerable.
+# Para mejoras sugeridas, los estudiantes podrían investigar:
+bcrypt
+argon2-cffi
+python-dotenv
