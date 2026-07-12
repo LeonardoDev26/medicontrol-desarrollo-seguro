@@ -3,7 +3,6 @@
 ## Descripción
 
 MEDICONTROL es un sistema de gestión médica desarrollado en Python, utilizado como base para la evaluación final de la asignatura Programación Segura de INACAP.
-
 El proyecto consiste en analizar el sistema entregado por el profesor, identificar vulnerabilidades de seguridad, aplicar buenas prácticas de programación segura y documentar el proceso de desarrollo utilizando la metodología Scrum y herramientas de control de versiones.
 
 ---
@@ -43,10 +42,11 @@ Fortalecer la seguridad del sistema MEDICONTROL mediante el análisis, correcci�
 - Jira
 - Visual Studio Code
 
-### Sistemas Operativos
+### Sistemas Operativos de los devs
 
 - Ubuntu Linux
 - macOS
+- Windows
 
 ### Herramientas que se incorporarán durante el desarrollo
 
@@ -129,7 +129,6 @@ Las ramas de desarrollo se crearán a partir de `develop` según las funcionalid
 ## Metodología de Trabajo
 
 El proyecto será desarrollado utilizando la metodología Scrum.
-
 Durante el desarrollo se planificarán y ejecutarán los sprints necesarios hasta la entrega final de la evaluación.
 
 ---
@@ -137,7 +136,6 @@ Durante el desarrollo se planificarán y ejecutarán los sprints necesarios hast
 ## Estado del Proyecto
 
 Versión 1.0
-
 Estado: En preparación.
 
 ---
@@ -149,15 +147,12 @@ Estado: En preparación.
 | 1.0 | Configuración inicial del proyecto y documentación base. |
 
 ---
-
 ## Asignatura
 
 Programación Segura
 
 Instituto Profesional INACAP
-
 ---
 
 ## Licencia
-
 Proyecto desarrollado exclusivamente con fines académicos.
