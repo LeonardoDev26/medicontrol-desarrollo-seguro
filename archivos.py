@@ -2,7 +2,6 @@
 # Módulo de guardado de archivos.
 # ============================================================
 
-
 def guardar_usuarios(nombre_archivo, usuarios):
     archivo = open(nombre_archivo, "w", encoding="utf-8")
 

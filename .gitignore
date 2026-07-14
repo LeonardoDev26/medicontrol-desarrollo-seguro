@@ -2,15 +2,17 @@
 __pycache__/
 *.py[cod]
 
-# Entornos virtuales
+# Entorno virtual
 .venv/
 venv/
 env/
 
-# Configuración de VS Code
+# VS Code
 .vscode/
 
 # Archivos del sistema
 .DS_Store
 Thumbs.db
 
+# Credenciales de prueba
+credenciales_prueba.md
