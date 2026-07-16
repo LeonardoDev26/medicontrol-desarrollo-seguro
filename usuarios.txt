@@ -3,4 +3,4 @@
 33333333-3;Carlos Rojas;Doctor;$2b$12$aVQR2ghpYvGD.uoE.gD04OEJCDil7eOVocCmINywL41Q/9N1ABi/i;carlos.rojas@medicontrol.cl
 55555555-5;Pepito;Doctor;$2b$12$EUWxX9GStjtvwdo7p7JcxelXvB0u6YE7XCbJZYTg5zT3aY5VsRXYa;pepito@gamail.com
 44444444-4;leonardo;Doctor;$2b$12$DKREKIP9EqqnE4k6qYIiTeC2.Jd4i9bNV5vbuF/981eLNUIge/MxO;leo@gmail.com
-66666666-6;doctor5;Doctor;$2b$12$5XWlSFYUwa4hTgMTlRj9O.EbR/07KvTIwfTFyjqa4zqa5bkvOW0G6;gAAAAABqVsyFfXaHVB07sZyPxvj9vQlRksN02D-WtENKP6nDPCe_auCElr_Sv_fIu1BJBb8BvoXGveSPwY1L0DNNGvwDmXIYtgwGxnrMGDYHdDoR8H5T8Ng=
+66666666-6;doctor5;Doctor;$2b$12$5XWlSFYUwa4hTgMTlRj9O.EbR/07KvTIwfTFyjqa4zqa5bkvOW0G6;doctor@gmail.com

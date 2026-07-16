@@ -1,7 +1,7 @@
 # ============================================================
 # Módulo de pacientes - datos sensibles y validaciones débiles.
 # ============================================================
-
+from seguridad import descifrar
 
 def cargar_pacientes(nombre_archivo):
     pacientes = {}
@@ -13,22 +13,20 @@ def cargar_pacientes(nombre_archivo):
             rut = datos[0]
             pacientes[rut] = {
                 "rut": datos[0],
-                "nombre": datos[1],
-                "edad": datos[2],
-                "direccion": datos[3],
-                "telefono": datos[4]
+                "nombre": descifrar(datos[1]),
+                "edad": int(datos[2]),
+                "direccion": descifrar(datos[3]),
+                "telefono": descifrar(datos[4])
             }
 
     archivo.close()
     return pacientes
-
 
 def registrar_paciente(pacientes):
     print("\n--- Registrar paciente ---")
     rut = input("RUT paciente: ")
     nombre = input("Nombre paciente: ")
 
-    
     edad = eval(input("Edad paciente: "))
 
     direccion = input("Dirección: ")

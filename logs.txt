@@ -19,3 +19,17 @@ Ingreso exitoso: 11111111-1 - Administrador
 Cierre de sesión administrador: 11111111-1
 Ingreso exitoso: 44444444-4 - Doctor
 Ingreso exitoso: 11111111-1 - Administrador
+Ingreso exitoso: 22222222-2 - Doctor
+Cierre de sesión doctor: 22222222-2
+Ingreso exitoso: 11111111-1 - Administrador
+Intento fallido de acceso
+Ingreso exitoso: 11111111-1 - Administrador
+Cierre de sesión administrador: 11111111-1
+Ingreso exitoso: 11111111-1 - Administrador
+Ingreso exitoso: 11111111-1 - Administrador
+Cierre de sesión administrador: 11111111-1
+Ingreso exitoso: 11111111-1 - Administrador
+Cierre de sesión administrador: 11111111-1
+Ingreso exitoso: 22222222-2 - Doctor
+Ingreso exitoso: 11111111-1 - Administrador
+Cierre de sesión administrador: 11111111-1

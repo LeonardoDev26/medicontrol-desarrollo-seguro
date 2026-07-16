@@ -29,7 +29,7 @@ def cargar_usuarios(nombre_archivo):
     archivo.close()
     return usuarios
 
-def login(usuarios):
+def login(usuarios): 
     print("\n--- Inicio de sesión ---")
     rut = input("RUT usuario: ")
     password = getpass("Contraseña: ")
@@ -71,7 +71,7 @@ def registrar_usuario(usuarios):
 ).decode("utf-8")
     
     correo = input("Correo: ")
-    correo = cifrar(correo)
+    
 
     usuarios[rut] = {
         "rut": rut,

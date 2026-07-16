@@ -1,6 +1,7 @@
 # ============================================================
 # Módulo de diagnósticos - información médica sensible.
 # ============================================================
+from seguridad import descifrar
 
 
 def cargar_diagnosticos(nombre_archivo):
@@ -13,8 +14,8 @@ def cargar_diagnosticos(nombre_archivo):
             diagnostico = {
                 "rut_paciente": datos[0],
                 "fecha": datos[1],
-                "diagnostico": datos[2],
-                "tratamiento": datos[3],
+                "diagnostico": descifrar(datos[2]),
+                "tratamiento": descifrar(datos[3]),
                 "rut_doctor": datos[4]
             }
             diagnosticos.append(diagnostico)
