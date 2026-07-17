@@ -33,3 +33,4 @@ Cierre de sesión administrador: 11111111-1
 Ingreso exitoso: 22222222-2 - Doctor
 Ingreso exitoso: 11111111-1 - Administrador
 Cierre de sesión administrador: 11111111-1
+Ingreso exitoso: 11111111-1 - Administrador
