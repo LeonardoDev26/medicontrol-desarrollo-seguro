@@ -4,3 +4,25 @@ Intento fallido de acceso
 Ingreso exitoso: 11111111-1 - Administrador
 Intento fallido de acceso
 Ingreso exitoso: 33333333-3 - Doctor
+Intento fallido de acceso
+Ingreso exitoso: 11111111-1 - Administrador
+Intento fallido de acceso
+Ingreso exitoso: 22222222-2 - Doctor
+Cierre de sesión doctor: 22222222-2
+Ingreso exitoso: 11111111-1 - Administrador
+Ingreso exitoso: 11111111-1 - Administrador
+Ingreso exitoso: 11111111-1 - Administrador
+Ingreso exitoso: 11111111-1 - Administrador
+Ingreso exitoso: 11111111-1 - Administrador
+Ingreso exitoso: 11111111-1 - Administrador
+Ingreso exitoso: 11111111-1 - Administrador
+Ingreso exitoso: 11111111-1 - Administrador
+Ingreso exitoso: 11111111-1 - Administrador
+Intento fallido de acceso
+Intento fallido de acceso
+Ingreso exitoso: 11111111-1 - Administrador
+Ingreso exitoso: 11111111-1 - Administrador
+Ingreso exitoso: 11111111-1 - Administrador
+Intento fallido de acceso
+Ingreso exitoso: 11111111-1 - Administrador
+Ingreso exitoso: 11111111-1 - Administrador
