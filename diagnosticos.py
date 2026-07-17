@@ -4,53 +4,75 @@
 
 
 def cargar_diagnosticos(nombre_archivo):
-    diagnosticos = []  
-    archivo = open(nombre_archivo, "r", encoding="utf-8")
+    diagnosticos = []
 
-    for linea in archivo:
-        datos = linea.strip().split(";")
-        if len(datos) >= 5:
-            diagnostico = {
-                "rut_paciente": datos[0],
-                "fecha": datos[1],
-                "diagnostico": datos[2],
-                "tratamiento": datos[3],
-                "rut_doctor": datos[4]
-            }
-            diagnosticos.append(diagnostico)
+    try:
+        with open(nombre_archivo, "r", encoding="utf-8") as archivo:
 
-    archivo.close()
+            for linea in archivo:
+                datos = linea.strip().split(";")
+                if len(datos) >= 5:
+                    diagnostico = {
+                        "rut_paciente": datos[0],
+                        "fecha": datos[1],
+                        "diagnostico": datos[2],
+                        "tratamiento": datos[3],
+                        "rut_doctor": datos[4],
+                    }
+                    diagnosticos.append(diagnostico)
+
+    except FileNotFoundError:
+        print(f"Error: El archivo '{nombre_archivo}' no fue encontrado.")
+
+    except Exception as e:
+        print(f"Error inesperado al cargar el archivo: {e}")
+
     return diagnosticos
 
 
 def registrar_diagnostico(diagnosticos, pacientes, doctor_actual):
     print("\n--- Registrar diagnóstico ---")
+
     rut_paciente = input("RUT paciente: ")
 
-    fecha = input("Fecha atención (dd/mm/aaaa): ")
-    texto_diagnostico = input("Diagnóstico: ")
-    tratamiento = input("Tratamiento indicado: ")
+    if rut_paciente in pacientes:
+        fecha = input("Fecha atención (dd/mm/aaaa): ").strip()
+        if fecha != "":
+            texto_diagnostico = input("Diagnóstico: ").replace(";", ",").strip()
 
-    nuevo = {
-        "rut_paciente": rut_paciente,
-        "fecha": fecha,
-        "diagnostico": texto_diagnostico,
-        "tratamiento": tratamiento,
-        "rut_doctor": doctor_actual["rut"]
-    }
+            if texto_diagnostico != "":
+                tratamiento = input("Tratamiento indicado: ").replace(";", ",").strip()
 
-    diagnosticos.append(nuevo)
-    print("Diagnóstico registrado correctamente.")
+                if tratamiento != "":
+                    nuevo = {
+                        "rut_paciente": rut_paciente,
+                        "fecha": fecha,
+                        "diagnostico": texto_diagnostico,
+                        "tratamiento": tratamiento,
+                        "rut_doctor": doctor_actual["rut"],
+                    }
+
+                    diagnosticos.append(nuevo)
+                    print("Diagnóstico registrado correctamente.")
+                else:
+                    print("Error: Debe ingresar un tratamiento.")
+            else:
+                print("Error: Debe ingresar un diagnóstico.")
+        else:
+            print("Error: Debe ingresar la fecha de atención.")
+    else:
+        print("Error: El paciente no se encuentra registrado.")
 
 
 def listar_diagnosticos(diagnosticos, pacientes):
     print("\n--- Listado de diagnósticos ---")
 
     for d in diagnosticos:
+
         nombre_paciente = "Paciente no registrado"
+
         if d["rut_paciente"] in pacientes:
             nombre_paciente = pacientes[d["rut_paciente"]]["nombre"]
-
         print("Paciente:", d["rut_paciente"], "-", nombre_paciente)
         print("Fecha:", d["fecha"])
         print("Diagnóstico:", d["diagnostico"])
@@ -63,6 +85,7 @@ def buscar_diagnosticos_paciente(diagnosticos, pacientes, rut_paciente):
     print("\n--- Diagnósticos por paciente ---")
 
     encontrados = 0
+
     for d in diagnosticos:
         if d["rut_paciente"] == rut_paciente:
             print("Fecha:", d["fecha"])
