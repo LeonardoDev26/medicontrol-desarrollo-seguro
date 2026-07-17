@@ -16,3 +16,6 @@ Cierre de sesión administrador: 11111111-1
 Ingreso exitoso: 33333333-3 - Doctor
 Ingreso exitoso: 33333333-3 - Doctor
 Ingreso exitoso: 33333333-3 - Doctor
+[16/07/2026 21:23:27] Ingreso exitoso: 33333333-3 - Doctor
+[16/07/2026 21:23:59] Ingreso exitoso: 33333333-3 - Doctor
+[16/07/2026 21:28:55] Ingreso exitoso: 33333333-3 - Doctor

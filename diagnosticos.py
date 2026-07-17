@@ -35,33 +35,43 @@ def registrar_diagnostico(diagnosticos, pacientes, doctor_actual):
 
     rut_paciente = input("RUT paciente: ")
 
-    if rut_paciente in pacientes:
-        fecha = input("Fecha atención (dd/mm/aaaa): ").strip()
-        if fecha != "":
-            texto_diagnostico = input("Diagnóstico: ").replace(";", ",").strip()
-
-            if texto_diagnostico != "":
-                tratamiento = input("Tratamiento indicado: ").replace(";", ",").strip()
-
-                if tratamiento != "":
-                    nuevo = {
-                        "rut_paciente": rut_paciente,
-                        "fecha": fecha,
-                        "diagnostico": texto_diagnostico,
-                        "tratamiento": tratamiento,
-                        "rut_doctor": doctor_actual["rut"],
-                    }
-
-                    diagnosticos.append(nuevo)
-                    print("Diagnóstico registrado correctamente.")
-                else:
-                    print("Error: Debe ingresar un tratamiento.")
-            else:
-                print("Error: Debe ingresar un diagnóstico.")
-        else:
-            print("Error: Debe ingresar la fecha de atención.")
-    else:
+    while rut_paciente not in pacientes:
         print("Error: El paciente no se encuentra registrado.")
+        rut_paciente = input("RUT paciente: ")
+
+    fecha = ""
+    while fecha == "":
+        fecha = input("Fecha atención (dd/mm/aaaa): ").strip()
+
+        if fecha == "":
+            print("Error: Debe ingresar la fecha de atención.")
+
+    texto_diagnostico = ""
+    while texto_diagnostico == "":
+        texto_diagnostico = input("Diagnóstico: ").replace(";", ",").strip()
+
+        if texto_diagnostico == "":
+            print("Error: Debe ingresar un diagnóstico.")
+
+    tratamiento = ""
+    while tratamiento == "":
+        tratamiento = input("Tratamiento indicado: ").replace(";", ",").strip()
+
+        if tratamiento == "":
+            print("Error: Debe ingresar un tratamiento.")
+
+    nuevo = {
+        "rut_paciente": rut_paciente,
+        "fecha": fecha,
+        "diagnostico": texto_diagnostico,
+        "tratamiento": tratamiento,
+        "rut_doctor": doctor_actual["rut"],
+    }
+
+    diagnosticos.append(nuevo)
+
+    print("Diagnóstico registrado correctamente.")
+
 
 
 def listar_diagnosticos(diagnosticos, pacientes):
@@ -73,6 +83,7 @@ def listar_diagnosticos(diagnosticos, pacientes):
 
         if d["rut_paciente"] in pacientes:
             nombre_paciente = pacientes[d["rut_paciente"]]["nombre"]
+
         print("Paciente:", d["rut_paciente"], "-", nombre_paciente)
         print("Fecha:", d["fecha"])
         print("Diagnóstico:", d["diagnostico"])
