@@ -9,7 +9,7 @@ def pausar():
     input("\nPresione ENTER para continuar...")
 
 
-def registrar_log_inseguro(mensaje):
+def registrar_log(mensaje):
 
     try:
         with open("logs.txt", "a", encoding="utf-8") as archivo:

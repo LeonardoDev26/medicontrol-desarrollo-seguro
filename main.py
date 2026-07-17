@@ -8,7 +8,7 @@ from usuarios import cargar_usuarios, login, registrar_usuario, listar_usuarios
 from pacientes import cargar_pacientes, registrar_paciente, buscar_paciente, listar_pacientes
 from diagnosticos import cargar_diagnosticos, registrar_diagnostico, listar_diagnosticos, buscar_diagnosticos_paciente
 from archivos import guardar_usuarios, guardar_pacientes, guardar_diagnosticos
-from utilidades import pausar, registrar_log_inseguro
+from utilidades import pausar, registrar_log
 
 ARCHIVO_USUARIOS = "usuarios.txt"
 ARCHIVO_PACIENTES = "pacientes.txt"
@@ -48,7 +48,7 @@ def menu_administrador(usuario_actual, usuarios, pacientes, diagnosticos):
             guardar_diagnosticos(ARCHIVO_DIAGNOSTICOS, diagnosticos)
             print("Información guardada correctamente.")
         elif opcion == "7":
-            registrar_log_inseguro("Cierre de sesión administrador: " + usuario_actual["rut"])
+            registrar_log("Cierre de sesión administrador: " + usuario_actual["rut"])
             print("Cerrando sesión...")
         else:
             print("Opción inválida")
@@ -86,7 +86,7 @@ def menu_doctor(usuario_actual, usuarios, pacientes, diagnosticos):
             guardar_diagnosticos(ARCHIVO_DIAGNOSTICOS, diagnosticos)
             print("Diagnósticos guardados correctamente.")
         elif opcion == "6":
-            registrar_log_inseguro("Cierre de sesión doctor: " + usuario_actual["rut"])
+            registrar_log("Cierre de sesión doctor: " + usuario_actual["rut"])
             print("Cerrando sesión...")
         else:
             print("Opción inválida")
@@ -115,7 +115,7 @@ def main():
             usuario_actual = login(usuarios)
 
             if usuario_actual is not None:
-                registrar_log_inseguro("Ingreso exitoso: " + usuario_actual["rut"] + " - " + usuario_actual["rol"])
+                registrar_log("Ingreso exitoso: " + usuario_actual["rut"] + " - " + usuario_actual["rol"])
                 if usuario_actual["rol"] == "Administrador":
                     menu_administrador(usuario_actual, usuarios, pacientes, diagnosticos)
                 elif usuario_actual["rol"] == "Doctor":
@@ -123,7 +123,7 @@ def main():
                 else:
                     print("Rol no reconocido. Contacte al administrador.")
             else:
-                registrar_log_inseguro("Intento fallido de acceso")
+                registrar_log("Intento fallido de acceso")
                 print("Credenciales incorrectas")
 
         elif opcion == "2":

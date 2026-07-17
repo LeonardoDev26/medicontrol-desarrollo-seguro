@@ -5,6 +5,8 @@
 from getpass import getpass
 import bcrypt
 from seguridad import cifrar, descifrar
+from pacientes import validar_rut
+
 
 ROLES = ("Administrador", "Doctor")
 
@@ -72,16 +74,17 @@ def login(usuarios):
 def registrar_usuario(usuarios):
     print("\n--- Registrar usuario ---")
 
-    rut = input("RUT: ").strip()
+    rut_valido = False
+    while not rut_valido:
 
-    while rut == "" or rut in usuarios:
+        rut = input("RUT: ").strip().upper()
 
-        if rut == "":
-            print("El RUT no puede estar vacío.")
-        else:
-            print("El RUT ya está registrado.")
+        if validar_rut(rut):
 
-        rut = input("RUT: ").strip()
+            if rut in usuarios:
+                print("El RUT ya está registrado.")
+            else:
+                rut_valido = True
 
     nombre = input("Nombre: ").strip()
 
