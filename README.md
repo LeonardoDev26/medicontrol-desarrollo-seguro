@@ -8,8 +8,6 @@ El objetivo del proyecto fue analizar el sistema entregado por el profesor, iden
 
 ---
 
-# Objetivos
-
 ## Objetivo General
 
 Fortalecer la seguridad del sistema MEDICONTROL mediante el análisis, corrección y documentación de las vulnerabilidades presentes en el código fuente.

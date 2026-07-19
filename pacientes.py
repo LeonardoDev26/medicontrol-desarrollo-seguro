@@ -8,23 +8,29 @@ from seguridad import descifrar
 def cargar_pacientes(nombre_archivo):
     pacientes = {}
 
-    archivo = open(nombre_archivo, "r", encoding="utf-8")
+    try:
+        with open(nombre_archivo, "r", encoding="utf-8") as archivo:
 
-    for linea in archivo:
-        datos = linea.strip().split(";")
+            for linea in archivo:
+                datos = linea.strip().split(";")
 
-        if len(datos) >= 5:
-            rut = datos[0]
+                if len(datos) >= 5:
+                    rut = datos[0]
 
-            pacientes[rut] = {
-                "rut": datos[0],
-                "nombre": descifrar(datos[1]),
-                "edad": int(datos[2]),
-                "direccion": descifrar(datos[3]),
-                "telefono": descifrar(datos[4])
-            }
+                    pacientes[rut] = {
+                        "rut": datos[0],
+                        "nombre": descifrar(datos[1]),
+                        "edad": int(datos[2]),
+                        "direccion": descifrar(datos[3]),
+                        "telefono": descifrar(datos[4])
+                    }
 
-    archivo.close()
+    except FileNotFoundError:
+        print("No se encontró el archivo de pacientes.")
+
+    except OSError:
+        print("Ocurrió un error al leer el archivo de pacientes.")
+
     return pacientes
 
 
