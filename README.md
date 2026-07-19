@@ -1,89 +1,102 @@
-# MEDICONTROL - Eva4
+# MEDICONTROL - EVA4
 
 ## Descripción
 
-MEDICONTROL es un sistema de gestión médica desarrollado en Python, utilizado como base para la evaluación final de la asignatura Programación Segura de INACAP.
-El proyecto consiste en analizar el sistema entregado por el profesor, identificar vulnerabilidades de seguridad, aplicar buenas prácticas de programación segura y documentar el proceso de desarrollo utilizando la metodología Scrum y herramientas de control de versiones.
+MEDICONTROL es un sistema de gestión médica desarrollado en Python como proyecto final de la asignatura **Programación Segura** de INACAP.
+
+El objetivo del proyecto fue analizar el sistema entregado por el profesor, identificar vulnerabilidades de seguridad, aplicar buenas prácticas de programación segura y documentar el proceso de desarrollo utilizando la metodología Scrum y herramientas de control de versiones.
 
 ---
 
-## Objetivos
+# Objetivos
 
-### Objetivo General
+## Objetivo General
 
 Fortalecer la seguridad del sistema MEDICONTROL mediante el análisis, corrección y documentación de las vulnerabilidades presentes en el código fuente.
 
-### Objetivos Específicos
+## Objetivos Específicos
 
-- Analizar el código entregado por el profesor.
+- Analizar el código fuente proporcionado.
 - Identificar vulnerabilidades de seguridad.
+- Implementar controles de seguridad para proteger la información sensible.
 - Aplicar buenas prácticas de programación segura.
-- Utilizar Git y GitHub para el control de versiones.
-- Gestionar el proyecto utilizando la metodología Scrum.
-- Documentar el desarrollo del proyecto.
+- Gestionar el desarrollo utilizando Git y GitHub.
+- Organizar el trabajo mediante la metodología Scrum.
+- Documentar todas las mejoras implementadas.
 
 ---
 
-## Equipo de Desarrollo
+# Equipo de Desarrollo
 
 | Integrante | Rol |
 |------------|-----|
 | Leonardo Bolívar | Scrum Master |
 | Alejandra Espinoza | Developer |
-| Daniel Ramirez | Developer |
+| Daniel Ramírez | Developer |
 
 ---
 
-## Tecnologías Utilizadas
+# Tecnologías Utilizadas
 
 - Python 3
 - Git
 - GitHub
 - Jira
 - Visual Studio Code
+- bcrypt
+- cryptography (Fernet)
 
-### Sistemas Operativos de los devs
+---
+
+# Sistemas Operativos
 
 - Ubuntu Linux
 - macOS
 - Windows
 
-### Herramientas que se incorporarán durante el desarrollo
+---
 
-- Bandit
-- SonarQube
-- bcrypt
+# Mejoras de Seguridad Implementadas
+
+Durante el desarrollo del proyecto se incorporaron distintas medidas para fortalecer la seguridad del sistema:
+
+- Validación de RUT.
+- Validación de correos electrónicos.
+- Validación de datos ingresados por el usuario.
+- Manejo de excepciones.
+- Ocultamiento de contraseñas mediante `getpass`.
+- Almacenamiento seguro de contraseñas utilizando `bcrypt`.
+- Cifrado de información sensible mediante `Fernet` (`cryptography`).
 
 ---
 
-## Estructura del Proyecto
+# Estructura del Proyecto
 
 ```text
 medicontrol_eval/
 
-├── archivos.py
-├── diagnosticos.py
-├── pacientes.py
-├── usuarios.py
-├── utilidades.py
 ├── main.py
+├── usuarios.py
+├── pacientes.py
+├── diagnosticos.py
+├── archivos.py
+├── seguridad.py
+├── utilidades.py
 │
 ├── usuarios.txt
 ├── pacientes.txt
 ├── diagnosticos.txt
 ├── logs.txt
+├── clave.key
 │
-├── README.md
 ├── requirements.txt
-├── .gitignore
-│
-├── docs/
-└── evidencias/
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## Instalación
+# Instalación
 
 Clonar el repositorio:
 
@@ -97,6 +110,26 @@ Ingresar al directorio del proyecto:
 cd medicontrol_eval
 ```
 
+Crear un entorno virtual (opcional pero recomendado):
+
+```bash
+python3 -m venv venv
+```
+
+Activar el entorno virtual:
+
+Linux:
+
+```bash
+source venv/bin/activate
+```
+
+Windows:
+
+```cmd
+venv\Scripts\activate
+```
+
 Instalar las dependencias:
 
 ```bash
@@ -105,7 +138,7 @@ pip install -r requirements.txt
 
 ---
 
-## Ejecución
+# Ejecución
 
 ```bash
 python3 main.py
@@ -113,46 +146,57 @@ python3 main.py
 
 ---
 
-## Flujo de Trabajo con Git
+# Flujo de Trabajo con Git
 
-El proyecto utilizará una estrategia basada en ramas para facilitar el trabajo colaborativo.
+Para el desarrollo del proyecto se utilizó una estrategia basada en ramas.
 
 Ramas principales:
 
 - main
-- develop
+- integration
 
-Las ramas de desarrollo se crearán a partir de `develop` según las funcionalidades asignadas a cada integrante.
+Ramas de desarrollo:
 
----
+- feature/leonardo-seguridad
+- feature/ale-pacientes
+- feature/daniel-diagnosticos
 
-## Metodología de Trabajo
-
-El proyecto será desarrollado utilizando la metodología Scrum.
-Durante el desarrollo se planificarán y ejecutarán los sprints necesarios hasta la entrega final de la evaluación.
-
----
-
-## Estado del Proyecto
-
-Versión 1.0
-Estado: En preparación.
+Cada integrante desarrolló sus funcionalidades en una rama independiente, las cuales posteriormente fueron integradas en la rama `integration` y finalmente fusionadas con `main`.
 
 ---
 
-## Historial de Versiones
+# Metodología de Trabajo
+
+El desarrollo del proyecto se realizó utilizando la metodología Scrum.
+
+Durante el proceso se llevaron a cabo reuniones de planificación, seguimiento e integración, registrando actas y evidencias del avance de cada sprint.
+
+---
+
+# Estado del Proyecto
+
+**Versión:** 1.0
+
+**Estado:** Finalizado.
+
+---
+
+# Historial de Versiones
 
 | Versión | Descripción |
 |----------|-------------|
-| 1.0 | Configuración inicial del proyecto y documentación base. |
+| 1.0 | Versión final del proyecto con mejoras de seguridad implementadas. |
 
 ---
-## Asignatura
+
+# Asignatura
 
 Programación Segura
 
 Instituto Profesional INACAP
+
 ---
 
-## Licencia
+# Licencia
+
 Proyecto desarrollado exclusivamente con fines académicos.
