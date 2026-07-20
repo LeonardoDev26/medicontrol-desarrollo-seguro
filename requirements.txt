@@ -1,5 +1,10 @@
 bcrypt==5.0.0
-cffi==2.1.0
 cryptography==49.0.0
-password-validator==1.0
+
+# Dependencias requeridas por cryptography
+cffi==2.1.0
 pycparser==3.0
+
+
+# Herramienta utilizadas durante el desarrollo
+bandit==1.9.4
