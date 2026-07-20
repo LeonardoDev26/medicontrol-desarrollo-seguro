@@ -5,9 +5,9 @@
 # ============================================================
 
 from usuarios import cargar_usuarios, login, registrar_usuario, listar_usuarios
-from pacientes import cargar_pacientes, registrar_paciente, buscar_paciente, listar_pacientes
+from pacientes import cargar_pacientes, buscar_paciente, listar_pacientes
 from diagnosticos import cargar_diagnosticos, registrar_diagnostico, listar_diagnosticos, buscar_diagnosticos_paciente
-from archivos import guardar_usuarios, guardar_pacientes, guardar_diagnosticos
+from archivos import guardar_usuarios, guardar_diagnosticos
 from utilidades import pausar, registrar_log
 
 ARCHIVO_USUARIOS = "usuarios.txt"
@@ -24,11 +24,8 @@ def menu_administrador(usuario_actual, usuarios, pacientes, diagnosticos):
         print("==============================")
         print("1. Registrar usuario")
         print("2. Listar usuarios")
-        print("3. Registrar paciente")
-        print("4. Listar pacientes")
-        print("5. Ver todos los diagnósticos")
-        print("6. Guardar información")
-        print("7. Cerrar sesión")
+        print("3. Guardar información")
+        print("4. Cerrar sesión")
 
         opcion = input("Seleccione opción: ")
 
@@ -37,17 +34,9 @@ def menu_administrador(usuario_actual, usuarios, pacientes, diagnosticos):
         elif opcion == "2":
             listar_usuarios(usuarios)
         elif opcion == "3":
-            registrar_paciente(pacientes)
-        elif opcion == "4":
-            listar_pacientes(pacientes)
-        elif opcion == "5":
-            listar_diagnosticos(diagnosticos, pacientes)
-        elif opcion == "6":
             guardar_usuarios(ARCHIVO_USUARIOS, usuarios)
-            guardar_pacientes(ARCHIVO_PACIENTES, pacientes)
-            guardar_diagnosticos(ARCHIVO_DIAGNOSTICOS, diagnosticos)
             print("Información guardada correctamente.")
-        elif opcion == "7":
+        elif opcion == "4":
             registrar_log("Cierre de sesión administrador: " + usuario_actual["rut"])
             print("Cerrando sesión...")
         else:

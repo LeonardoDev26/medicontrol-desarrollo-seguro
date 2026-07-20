@@ -88,6 +88,7 @@ medicontrol_eval/
 ├── clave.key
 │
 ├── requirements.txt
+│── reporte_bandit.txt
 ├── README.md
 └── .gitignore
 ```
