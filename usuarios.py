@@ -4,7 +4,7 @@
 
 from getpass import getpass
 import bcrypt
-from seguridad import cifrar, descifrar
+from seguridad import descifrar
 from pacientes import validar_rut
 
 

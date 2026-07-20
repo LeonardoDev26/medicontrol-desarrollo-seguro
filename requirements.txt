@@ -7,4 +7,4 @@ pycparser==3.0
 
 
 # Herramienta utilizadas durante el desarrollo
-bandit==1.9.4
+bandit==1.9.4   
