@@ -43,7 +43,7 @@ Fortalecer la seguridad del sistema MEDICONTROL mediante el análisis, correcci�
 - Visual Studio Code
 - bcrypt
 - cryptography (Fernet)
-
+- Bandit (análisis estático de seguridad del código)
 ---
 
 # Sistemas Operativos
