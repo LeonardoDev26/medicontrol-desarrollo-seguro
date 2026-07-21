@@ -1,6 +1,9 @@
-[19/07/2026 18:44:16] Ingreso exitoso: 11111111-1 - Administrador
-[19/07/2026 18:44:23] Cierre de sesión administrador: 11111111-1
-[20/07/2026 19:08:52] Ingreso exitoso: 11111111-1 - Administrador
-[20/07/2026 19:12:01] Ingreso exitoso: 11111111-1 - Administrador
-[20/07/2026 19:13:12] Ingreso exitoso: 11111111-1 - Administrador
-[20/07/2026 19:24:48] Ingreso exitoso: 11111111-1 - Administrador
+[20/07/2026 19:45:50] Ingreso exitoso - Administrador
+[20/07/2026 19:45:54] Cierre de sesión administrador
+[20/07/2026 19:46:05] Ingreso exitoso - Doctor
+[20/07/2026 19:46:08] Cierre de sesión doctor
+[20/07/2026 19:47:30] Ingreso exitoso - Administrador
+[21/07/2026 00:06:23] Ingreso exitoso - Doctor
+[21/07/2026 13:40:23] Ingreso exitoso - Administrador
+[21/07/2026 13:41:10] Ingreso exitoso - Doctor
+[21/07/2026 13:42:46] Ingreso exitoso - Doctor

@@ -22,7 +22,6 @@ def cargar_diagnosticos(nombre_archivo):
                         "tratamiento": descifrar(datos[3]),
                         "rut_doctor": datos[4]
                     }
-
                     diagnosticos.append(diagnostico)
 
     except FileNotFoundError:
