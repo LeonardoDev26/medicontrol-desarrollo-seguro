@@ -16,3 +16,6 @@ Thumbs.db
 
 # Credenciales de prueba
 credenciales_prueba.md
+
+#llave fernet
+clave.key
